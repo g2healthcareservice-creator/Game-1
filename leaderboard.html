@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Leaderboard</title>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; background: #222; color: #fff; text-align: center; }
+    h2 { font-size: 2em; margin-bottom: 20px; }
+    ul { list-style: none; padding: 0; max-width: 400px; margin: auto; }
+    li { padding: 12px; margin: 8px; background: #333; border-radius: 5px; font-size: 1.5em; }
+  </style>
+</head>
+<body>
+  <h2>🏆 Live Leaderboard 🏆</h2>
+  <ul id="scoresList"></ul>
+
+  <script>
+    // 🔹 Firebase Config (same as in quiz.html)
+    const firebaseConfig = {
+      apiKey: "YOUR_API_KEY",
+      authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+      projectId: "YOUR_PROJECT_ID",
+      storageBucket: "YOUR_PROJECT_ID.appspot.com",
+      messagingSenderId: "YOUR_SENDER_ID",
+      appId: "YOUR_APP_ID"
+    };
+
+    const app = firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+
+    // 🔹 Fetch and display scores live
+    db.collection("scores")
+      .orderBy("score", "desc")
+      .orderBy("timestamp", "asc")
+      .onSnapshot(snapshot => {
+        let list = document.getElementById("scoresList");
+        list.innerHTML = "";
+        snapshot.forEach(doc => {
+          let data = doc.data();
+          let li = document.createElement("li");
+          li.textContent = `${data.name} — ${data.score}`;
+          list.appendChild(li);
+        });
+      });
+  </script>
+</body>
+</html>
