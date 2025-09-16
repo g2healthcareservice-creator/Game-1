@@ -52,20 +52,52 @@ db.collection("scores").add({
 
     <!-- Question 1 -->
     <div class="question" id="q1">
-      <p>1. What does ICE in ICE BRIDGE stand for?</p>
-      <input type="radio" name="q1" value="a"> Innovation, Collaboration, Excellence <br>
-      <input type="radio" name="q1" value="b"> Integrity, Commitment, Excellence <br>
-      <input type="radio" name="q1" value="c"> International Climate Exchange <br>
-      <button onclick="checkAnswer('q1','a')">Submit</button>
+      <p>1. Why should you wash hands before eating??</p>
+      <input type="radio" name="q1" value="a"> To look clean <br>
+      <input type="radio" name="q1" value="b"> To remove germs <br>
+      <input type="radio" name="q1" value="c"> To waste water <br>
+      <input type="radio" name="q1" value="c"> None of these <br>
+      <button onclick="checkAnswer('q1','b')">Submit</button>
     </div>
 
     <!-- Question 2 -->
     <div class="question" id="q2">
-      <p>2. Why is bridge safety important?</p>
-      <input type="radio" name="q2" value="a"> To save costs only <br>
-      <input type="radio" name="q2" value="b"> To ensure structural integrity and human safety <br>
-      <input type="radio" name="q2" value="c"> To make bridges look beautiful <br>
-      <button onclick="checkAnswer('q2','b')">Submit</button>
+      <p>2. What is the emergency number in a hospital?</p>
+      <input type="radio" name="q2" value="a"> 100 <br>
+      <input type="radio" name="q2" value="b"> 102 <br>
+      <input type="radio" name="q2" value="c"> 108 <br>
+      <input type="radio" name="q2" value="c"> 101 <br>
+      <button onclick="checkAnswer('q2','c')">Submit</button>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question" id="q3">
+      <p>3. Who should wear a mask in the hospital?</p>
+      <input type="radio" name="q3" value="a"> Only doctors <br>
+      <input type="radio" name="q3" value="b"> Patients, visitors, and staff <br>
+      <input type="radio" name="q3" value="c"> Only nurses <br>
+      <input type="radio" name="q3" value="c"> Nobody <br>
+      <button onclick="checkAnswer('q3','b')">Submit</button>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="question" id="q4">
+      <p>4. How can you help if you see a child in distress?</p>
+      <input type="radio" name="q4" value="a"> Comfort them and call staff <br>
+      <input type="radio" name="q4" value="b"> Ignore them <br>
+      <input type="radio" name="q4" value="c"> Take a video <br>
+      <input type="radio" name="q4" value="c"> Tell others but do nothing <br>
+      <button onclick="checkAnswer('q4','a')">Submit</button>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="question" id="q5">
+      <p>5. Why is patient safety important?</p>
+      <input type="radio" name="q5" value="a"> To avoid medical errors <br>
+      <input type="radio" name="q5" value="b"> To waste money <br>
+      <input type="radio" name="q5" value="c"> To delay treatment <br>
+      <input type="radio" name="q5" value="c"> For entertainment <br>
+      <button onclick="checkAnswer('q5','a')">Submit</button>
     </div>
 
     <!-- Result -->
